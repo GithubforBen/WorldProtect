@@ -1,0 +1,4 @@
+name: WorldProtect
+version: '${project.version}'
+main: net.worldprotect.WorldProtect
+api-version: 1.19
