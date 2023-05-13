@@ -1,4 +1,4 @@
-package net.worldprotect;
+package net.worldprotect.utils;
 
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class LoactionConfiguration {
-    File file = new File("./Config/Money.yml");
+    File file = new File("./Config/Protection.yml");
     YamlConfiguration configuration = new YamlConfiguration();
     public LoactionConfiguration() {
         if (!file.exists()) {

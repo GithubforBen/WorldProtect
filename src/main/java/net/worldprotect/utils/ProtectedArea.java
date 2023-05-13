@@ -1,4 +1,4 @@
-package net.worldprotect;
+package net.worldprotect.utils;
 
 import org.bukkit.Location;
 

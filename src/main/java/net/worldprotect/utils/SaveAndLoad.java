@@ -1,5 +1,8 @@
-package net.worldprotect;
+package net.worldprotect.utils;
 
+import net.worldprotect.Main;
+import net.worldprotect.utils.LoactionConfiguration;
+import net.worldprotect.utils.ProtectedArea;
 import org.bukkit.Location;
 
 import java.util.ArrayList;
@@ -25,6 +28,12 @@ public class SaveAndLoad {
 
         for (int i = 0; i < loactionConfiguration.getConfiguration().getInt("areas.size"); i++) {
             int finalI = i;
+            if (loactionConfiguration.getConfiguration().getLocation("areas." + String.valueOf(finalI) + ".loc1") == null || loactionConfiguration.getConfiguration().getLocation("areas." + String.valueOf(finalI) + ".loc2") == null) {
+                System.out.println(finalI);
+                System.out.println("NAH");
+                return new ArrayList<>();
+            }
+            System.out.println(i);
             ProtectedArea protectedArea = new ProtectedArea() {
                 @Override
                 public Location location1() {

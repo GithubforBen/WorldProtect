@@ -1,4 +1,9 @@
 name: WorldProtect
 version: '${project.version}'
-main: net.worldprotect.WorldProtect
+main: net.worldprotect.Main
 api-version: 1.19
+commands:
+  addArea:
+    permission: modify-areas
+  removeArea:
+    permission: modify-areas
