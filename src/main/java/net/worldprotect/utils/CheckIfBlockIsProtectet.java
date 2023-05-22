@@ -64,23 +64,16 @@ public class CheckIfBlockIsProtectet {
         }
     }
 
-    public void remove(Location location1, Location location2) {
-        ProtectedArea protectedArea = new ProtectedArea() {
-            @Override
-            public Location location1() {
-                return location1;
+    public String remove(Location location1, Location location2) {
+        for (ProtectedArea area: protectedAreas) {
+            if (area.location1().equals(location1)) {
+                if (area.location2().equals(location2)) {
+                    protectedAreas.remove(area);
+                    return "Success!";
+                }
             }
-
-            @Override
-            public Location location2() {
-                return location2;
-            }
-        };
-
-        if (protectedAreas.contains(protectedArea)) {
-            Bukkit.getConsoleSender().sendMessage("jkdfhjk");
         }
-        protectedAreas.remove(protectedArea);
+        return "That didn't work!";
     }
 
 

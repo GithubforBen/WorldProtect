@@ -47,7 +47,7 @@ public class RemoveAreCommand implements CommandExecutor, TabCompleter {
         Location location1 = new Location(player.getWorld(), x1,y1,z1);
         Location location2 = new Location(player.getWorld(), x2,y2,z2);
 
-        Main.getInstace().getCheckIfBlockIsProtectet().remove(location1, location2);
+        player.sendMessage(Main.getInstace().getCheckIfBlockIsProtectet().remove(location1, location2));
         return false;
     }
 
